@@ -1,0 +1,12 @@
+@import "../_support/support";
+
+.link {
+    &:hover, &:focus {
+        color: $link-hover-color;
+        border-bottom: 1px currentColor solid;
+    }
+}
+
+.link--underline {
+    border-bottom: 1px currentColor solid;
+}
