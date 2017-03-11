@@ -6,6 +6,14 @@ The normalize file removes all style from any elements and relies completely on 
 
 For more information on what it includes and how it works, look at `demo/index.html`.
 
+## General style principles
+- Leans toward using the [BEM syntax](https://css-tricks.com/bem-101/).
+- Uses the `@` modifier syntax for breakpoints. For example, `u-p-2@xs u-p-1@md`.
+- Uses prefixes for specific types of classes
+  - `.u-` for utility classes
+  - `.g-` for grid classes
+  - `.js-` for javascript added classes
+
 ## Including in your project
 You can either...
 - [Download a release](https://github.com/kyleturman/brownstone/releases])
@@ -17,3 +25,6 @@ If you want to develop locally outside of a specific project...
 - Clone this repo from master
 - Run `npm install`
 - Start the development server with `gulp`.
+
+## Just the start
+More documentation coming soon!
