@@ -1,0 +1,37 @@
+@import "../_support/support";
+
+.panel {
+    background: $white;
+    border: 1px $border-color solid;
+    border-radius: $radius;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    padding: $panel-spacing;
+}
+
+.panel__row {
+    display: block;
+    border-top: 1px $border-color solid;
+    margin-left: -$panel-spacing;
+    margin-right: -$panel-spacing;
+    padding: $panel-spacing;
+
+    &:first-child {
+        border-top: none;
+        margin-top: -$panel-spacing;
+    }
+
+    &:last-child {
+        margin-bottom: -$panel-spacing;
+    }
+}
+
+.panel__row--has-hover {
+    &:hover, &:focus {
+        background: $panel-hover-background;
+        color: $panel-hover-color;
+        cursor: pointer;
+        display: block;
+    }
+}

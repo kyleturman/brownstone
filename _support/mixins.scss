@@ -1,4 +1,4 @@
-@import "variables";
+@import "../_variables";
 
 // -------------------------------
 // Utilities
@@ -38,7 +38,7 @@
 
     // Breakpoint, Up and Only if last breakpoint
     } @else if ($direction == up) or ($direction == only and length($breakpoints) < $index + 1) {
-        $size-query: (min-width: map-get($breakpoints, $name));
+        $size-query: "(min-width: #{map-get($breakpoints, $name)})";
 
     // Breakpoint, Only
     } @else if $direction == only {

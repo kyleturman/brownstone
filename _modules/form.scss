@@ -1,0 +1,40 @@
+@import "../_support/support";
+
+.input, .textarea, .select__element {
+    background: $white;
+    border-radius: $radius;
+    border: 1px $border-color solid;
+    display: block;
+    font-size: inherit;
+    resize: vertical;
+    outline: none;
+    padding: $spacing-unit * 4;
+    width: 100%;
+
+    &:focus {
+        box-shadow: 0 0 0 1px $border-color;
+    }
+}
+
+.select {
+    position: relative;
+
+    // Select arrow
+    &:after {
+        color: $border-color;
+        content: "\2023";
+        font-family: Courier, monospace;
+        font-size: 24px;
+        pointer-events: none;
+        position: absolute;
+        top: calc(50% + 1px);
+        right: $spacing-unit * 4;
+        transform: translateY(-50%) rotate(90deg);
+    }
+}
+
+.select__element {
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
