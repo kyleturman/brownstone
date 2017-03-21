@@ -5,23 +5,23 @@
 .g-row {
     @include clearfix;
     float: none;
-    padding-left: $spacing-unit*2;
-    padding-right: $spacing-unit*2;
+    padding-left: $spacing-unit * 2;
+    padding-right: $spacing-unit * 2;
     position: relative;
 
     @include breakpoint(md, up) {
-        padding-left: $spacing-unit*3;
-        padding-right: $spacing-unit*3;
+        padding-left: $spacing-unit * 3;
+        padding-right: $spacing-unit * 3;
     }
 
     @include breakpoint(lg, up) {
-        padding-left: $spacing-unit*5;
-        padding-right: $spacing-unit*5;
+        padding-left: $spacing-unit * 5;
+        padding-right: $spacing-unit * 5;
     }
 
     @include breakpoint(xxl, up) {
-        padding-left: $spacing-unit*8;
-        padding-right: $spacing-unit*8;
+        padding-left: $spacing-unit * 8;
+        padding-right: $spacing-unit * 8;
     }
 }
 
@@ -37,6 +37,8 @@
         padding-right: 0;
     }
 }
+
+// Columns
 
 [class*='g-col'] {
     float: left;
@@ -54,12 +56,6 @@
         padding-left: 18px;
         padding-right: 18px;
     }
-}
-
-.g-col--centered {
-    margin-left: auto;
-    margin-right: auto;
-    float: none;
 }
 
 @each $name in map-keys($breakpoints) {
@@ -84,6 +80,12 @@
             }
         }
     }
+}
+
+.g-col--centered {
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
 }
 
 

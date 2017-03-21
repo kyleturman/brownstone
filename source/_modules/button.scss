@@ -5,17 +5,19 @@
     border-radius: $radius;
     cursor: pointer;
     display: inline-block;
-    height: auto;
+    font: inherit;
+    font-weight: 600;
+    line-height: normal;
+    outline: none;
     padding-top: $spacing-unit    * 4;
     padding-bottom: $spacing-unit * 4;
     padding-left: $spacing-unit   * 6;
     padding-right: $spacing-unit  * 6;
-    font-family: inherit;
-    font-size: inherit;
-    outline: none;
     position: relative;
     text-align: center;
+    transition: background 100ms ease-out;
     user-select: none;
+    vertical-align: middle;
     white-space: nowrap;
     z-index: nth($z-indexes, 1);
 
@@ -38,5 +40,27 @@
             border: 1px map-get($btn-hover, border) solid;
             color: map-get($btn-hover, color);
         }
+    }
+}
+
+.btn-group {
+    @include clearfix;
+    display: inline-block;
+}
+
+.btn-group__btn {
+    float: left;
+    border-radius: 0;
+    margin-left: -1px; // To account for border
+
+    &:first-child {
+        border-top-left-radius: $border-radius;
+        border-bottom-left-radius: $border-radius;
+        margin-left: 0;
+    }
+
+    &:last-child {
+        border-top-right-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
     }
 }
